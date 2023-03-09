@@ -2,7 +2,7 @@
 # ansible_user: root
 
 # Kubernetes
-kube_version: v1.19.2
+kube_version: v1.26.1
 token: b0f7b8.8d1767876297d85c
 
 # 1.8.x feature: --feature-gates SelfHosting=true
@@ -37,9 +37,9 @@ kube_addon_dir: /etc/kubernetes/addon
 
 # Additional feature to install
 additional_features:
-  helm: false
-  metallb: false
-  healthcheck: false
+  helm: true
+  metallb: true
+  healthcheck: true
 
 # temporary directory used by additional features
 tmp_dir: /tmp/kubeadm-ansible-files
@@ -48,4 +48,4 @@ tmp_dir: /tmp/kubeadm-ansible-files
 container_runtime: containerd
 
 # helm helm version
-helm_version: "v2.17.0"
+helm_version: "v3.0.0"
