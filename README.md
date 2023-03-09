@@ -3,14 +3,11 @@ Kubeadm Ansible Playbook
 
 Crie um cluster Kubernetes usando Ansible com kubeadm. O objetivo é instalar facilmente um cluster Kubernetes em máquinas executando:
 
-
-
-- Ubuntu 20.04
+- Ubuntu 22.04
 
 - CentOS 7 
 
 - Debian 10
-
 
 
 Requisitos de sistema:
@@ -20,16 +17,11 @@ Requisitos de sistema:
 - Master e nodes devem ter acesso ao SSH sem senha 
 
 
-
-Faça o download dos arquivos atravé do gti:
-
-
+Faça o download dos arquivos atravé do git:
 
 git clone https://github.com/DenisonC/ansible_k8s_hard_way.git
 
 Adicione as informações do sistema  em um arquivo chamado hosts.ini. Por exemplo:
-
-
 
 [master]
 192.168.0.76
@@ -46,6 +38,7 @@ Se você estiver trabalhando com Ubuntu, adicione as seguintes propriedades a ca
 
 [master]
 192.168.0.76 ansible_python_interpreter='python3'
+
 [node] 
 192.168.0.77 ansible_python_interpreter='python3'
 
